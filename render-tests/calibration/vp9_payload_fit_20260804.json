@@ -1,0 +1,14 @@
+{
+  "payload": {
+    "qp_reference": 20.0,
+    "beta_ref_mbit_per_pixel": 2.3045533696200824e-06,
+    "lambda": 0.051338898676894715,
+    "content_kappa": {
+      "garden": 1.0,
+      "oasis": 1.6807805756327179,
+      "terminal": 0.7644505223335383
+    },
+    "samples": 3750,
+    "log_payload_density_r2": 0.6485082964728832
+  }
+}

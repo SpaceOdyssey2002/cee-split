@@ -1,0 +1,13 @@
+{
+  "model_root": "E:\\Documents\\资料\\Render\\Render\\测试\\ablation_models_decoupled_vp9",
+  "variants": [
+    "no_switch"
+  ],
+  "smooth_episodes": 50,
+  "evaluation_variants_plotted": [
+    "no_switch"
+  ],
+  "training_variants_plotted": [
+    "no_switch"
+  ]
+}

@@ -1,0 +1,45 @@
+# OS and editor files
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.user
+*.suo
+*.tmp
+
+# Local secrets
+.env
+.env.*
+!.env.example
+*credentials*.json
+
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Unity generated state and local builds
+unity-split-render/[Ll]ibrary/
+unity-split-render/[Tt]emp/
+unity-split-render/[Oo]bj/
+unity-split-render/[Ll]ogs/
+unity-split-render/[Bb]uild/
+unity-split-render/[Bb]uilds/
+unity-split-render/UserSettings/
+unity-split-render/.vs/
+unity-split-render/.utmp/
+unity-split-render/_codex_backups/
+unity-split-render/ShaderBackups/
+unity-split-render/*.csproj
+unity-split-render/*.sln
+unity-split-render/*.log
+
+# LaTeX intermediates and rendered QA scratch files
+paper/tmp/
+paper/*.aux
+paper/*.blg
+paper/*.fdb_latexmk
+paper/*.fls
+paper/*.log
+paper/*.out
+paper/*.synctex.gz

@@ -1,0 +1,60 @@
+{
+  "train": {
+    "name": "train",
+    "rows": 300000,
+    "seed": 20260615,
+    "workload": "E:\\资料\\Render\\Render\\测试\\datasets\\train_workload.csv",
+    "cloud_network": "E:\\资料\\Render\\Render\\测试\\datasets\\train_cloud_network.txt",
+    "edge_network": "E:\\资料\\Render\\Render\\测试\\datasets\\train_edge_network.txt",
+    "total_tris_percentiles": {
+      "1": 46218.99,
+      "5": 52163.0,
+      "50": 797495.0,
+      "95": 3163954.05,
+      "99": 3420818.4700000007
+    },
+    "cloud_bw_percentiles": {
+      "1": 3.1509071278572085,
+      "5": 3.6569666385650637,
+      "50": 36.31142807006836,
+      "95": 136.9468795776367,
+      "99": 153.9483801269531
+    },
+    "edge_bw_percentiles": {
+      "1": 2.3667013335227964,
+      "5": 2.7734498977661133,
+      "50": 29.478034019470215,
+      "95": 103.45700759887696,
+      "99": 118.27694160461427
+    }
+  },
+  "eval": {
+    "name": "eval",
+    "rows": 60000,
+    "seed": 20260616,
+    "workload": "E:\\资料\\Render\\Render\\测试\\datasets\\eval_workload.csv",
+    "cloud_network": "E:\\资料\\Render\\Render\\测试\\datasets\\eval_cloud_network.txt",
+    "edge_network": "E:\\资料\\Render\\Render\\测试\\datasets\\eval_edge_network.txt",
+    "total_tris_percentiles": {
+      "1": 45885.97,
+      "5": 51218.9,
+      "50": 811697.5,
+      "95": 2697930.1499999994,
+      "99": 3456767.4300000006
+    },
+    "cloud_bw_percentiles": {
+      "1": 3.3640760517120363,
+      "5": 3.7923920273780825,
+      "50": 37.75351333618164,
+      "95": 139.90358352661133,
+      "99": 154.4491928100586
+    },
+    "edge_bw_percentiles": {
+      "1": 2.327442853450775,
+      "5": 2.678273332118988,
+      "50": 32.71902084350586,
+      "95": 103.79594078063964,
+      "99": 117.73772911071778
+    }
+  }
+}

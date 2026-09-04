@@ -1,0 +1,121 @@
+{
+  "reference": "C:\\Users\\13577\\Desktop\\local.jpg",
+  "tests": {
+    "linear_depth": "C:\\Users\\13577\\Desktop\\线性.jpg",
+    "log_depth": "C:\\Users\\13577\\Desktop\\对数.jpg"
+  },
+  "status_bar_pixels_removed": 120,
+  "static_building_roi": {
+    "x0": 100,
+    "y0": 590,
+    "x1_exclusive": 1500,
+    "y1_exclusive": 800,
+    "description": "Static left building; excludes sky, foliage, and Development Console."
+  },
+  "registrations_test_to_local": {
+    "linear_depth": {
+      "local_keypoints": 1135,
+      "cloud_keypoints": 1499,
+      "ratio_test_matches": 577,
+      "ransac_inliers": 478,
+      "inlier_ratio": 0.82842287694974,
+      "median_inlier_reprojection_error_px": 0.1885828673839569,
+      "affine_a00": 0.9999077550415534,
+      "affine_a01": -6.721081974155746e-05,
+      "affine_tx": 0.14418866436099131,
+      "affine_a10": 2.780097479137308e-05,
+      "affine_a11": 1.0000394571109588,
+      "affine_ty": -0.0653926191920769,
+      "max_axis_scale": 1.0000423432413905,
+      "min_axis_scale": 0.9999048711679914,
+      "rotation_deg_approx": 0.00159302547005311
+    },
+    "log_depth": {
+      "local_keypoints": 1135,
+      "cloud_keypoints": 1662,
+      "ratio_test_matches": 608,
+      "ransac_inliers": 443,
+      "inlier_ratio": 0.7286184210526315,
+      "median_inlier_reprojection_error_px": 0.19352708756923676,
+      "affine_a00": 1.0000194481895188,
+      "affine_a01": 0.00032795088856530166,
+      "affine_tx": -0.13373039282462362,
+      "affine_a10": 1.3593381243047414e-06,
+      "affine_a11": 1.000050423984208,
+      "affine_ty": -0.020669231779887966,
+      "max_axis_scale": 1.0002003313447512,
+      "min_axis_scale": 0.9998695674935539,
+      "rotation_deg_approx": 7.788282277394581e-05
+    }
+  },
+  "delta_log_minus_linear": {
+    "vmaf_single_frame": -0.5631409999999999,
+    "psnr_rgb_db": 0.06056575358223526,
+    "ssim_rgb": -0.00777409863674472,
+    "mae_rgb_0_255": -0.337850340136054,
+    "rmse_rgb_0_255": -0.09836899175475011,
+    "boundary_f1_at_2px": -0.006132141423219883,
+    "boundary_median_px": -0.2360679774997898,
+    "boundary_clipped_mean_at_10px": 0.07076635557439159,
+    "pixel_fraction_mae_gt_10": -0.00010204081632653184,
+    "pixel_fraction_mae_gt_20": 0.014908163265306126
+  },
+  "limitations": [
+    "The screenshots were captured at different timestamps.",
+    "Evaluation is restricted to a static architectural ROI.",
+    "Affine registration introduces resampling.",
+    "Single-frame VMAF has no temporal-motion contribution."
+  ],
+  "results": [
+    {
+      "scope": "linear_depth_vs_local_gt",
+      "width": 1400,
+      "height": 210,
+      "vmaf_single_frame": 13.732428,
+      "psnr_rgb_db": 25.11163029304167,
+      "ssim_rgb": 0.7281269465735664,
+      "mae_rgb_0_255": 8.16022335600907,
+      "rmse_rgb_0_255": 14.15659037411227,
+      "boundary_displacement_px": 43.42076432998075,
+      "test_to_reference_px": 2.8905954851753055,
+      "reference_to_test_px": 83.95093317478619,
+      "boundary_median_px": 2.73606797749979,
+      "boundary_p95_px": 341.0058482294069,
+      "boundary_clipped_mean_at_10px": 3.8674834114825845,
+      "boundary_precision_at_2px": 0.6613816534541337,
+      "boundary_recall_at_2px": 0.3881491344873502,
+      "boundary_f1_at_2px": 0.48919901979730696,
+      "boundary_miss_rate_at_2px": 0.6118508655126498,
+      "false_edge_rate_at_2px": 0.3386183465458663,
+      "test_edge_density": 0.0030034013605442175,
+      "reference_edge_density": 0.005108843537414966,
+      "pixel_fraction_mae_gt_10": 0.22785034013605443,
+      "pixel_fraction_mae_gt_20": 0.05987414965986394
+    },
+    {
+      "scope": "log_depth_vs_local_gt",
+      "width": 1400,
+      "height": 210,
+      "vmaf_single_frame": 13.169287,
+      "psnr_rgb_db": 25.172196046623906,
+      "ssim_rgb": 0.7203528479368216,
+      "mae_rgb_0_255": 7.822373015873016,
+      "rmse_rgb_0_255": 14.05822138235752,
+      "boundary_displacement_px": 39.48852788436633,
+      "test_to_reference_px": 4.403634737006853,
+      "reference_to_test_px": 74.5734210317258,
+      "boundary_median_px": 2.5,
+      "boundary_p95_px": 322.05686188335267,
+      "boundary_clipped_mean_at_10px": 3.938249767056976,
+      "boundary_precision_at_2px": 0.5151739452257587,
+      "boundary_recall_at_2px": 0.45472703062583225,
+      "boundary_f1_at_2px": 0.48306687837408707,
+      "boundary_miss_rate_at_2px": 0.5452729693741678,
+      "false_edge_rate_at_2px": 0.48482605477424134,
+      "test_edge_density": 0.004595238095238095,
+      "reference_edge_density": 0.005108843537414966,
+      "pixel_fraction_mae_gt_10": 0.2277482993197279,
+      "pixel_fraction_mae_gt_20": 0.07478231292517007
+    }
+  ]
+}

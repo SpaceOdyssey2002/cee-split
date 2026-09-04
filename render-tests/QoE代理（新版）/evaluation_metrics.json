@@ -1,0 +1,28 @@
+{
+  "evaluated_model": "E:\\Documents\\资料\\Render\\Render\\测试\\QoE代理（新版）\\qoe_proxy_model.onnx",
+  "dataset": {
+    "csv_files": [
+      "D:\\Unity\\QoEProxy\\DatasetOutputs\\GardenScene_20260515_194206\\final_training_dataset.csv",
+      "D:\\Unity\\QoEProxy\\DatasetOutputs\\OasisScene_20260515_194557\\final_training_dataset.csv",
+      "D:\\Unity\\QoEProxy\\DatasetOutputs\\TerminalScene_20260515_194808\\final_training_dataset.csv"
+    ],
+    "total_samples": 3750,
+    "test_samples": 750,
+    "test_size": 0.2,
+    "random_state": 42
+  },
+  "vmaf": {
+    "mae": 6.213952750391602,
+    "mse": 62.33816996394996,
+    "rmse": 7.895452486333507,
+    "r2": 0.8825059298342252,
+    "pearson_r": 0.9394670043314548
+  },
+  "bitrate_kbps": {
+    "mae": 42691.02602916667,
+    "mse": 3232705398.735223,
+    "rmse": 56856.88523596085,
+    "r2": 0.5584630433115467,
+    "pearson_r": 0.7476585384340155
+  }
+}

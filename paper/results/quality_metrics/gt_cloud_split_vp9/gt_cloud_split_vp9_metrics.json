@@ -1,0 +1,99 @@
+{
+  "reference": "E:\\mypaper\\assets\\fig_gt.png",
+  "strategies": {
+    "pure_cloud_vp9": "C:\\Users\\13577\\Desktop\\cloud.jpg",
+    "split_vp9": "E:\\mypaper\\assets\\fig_vp9_10k.png"
+  },
+  "static_building_roi": {
+    "x0": 100,
+    "y0": 590,
+    "x1_exclusive": 1500,
+    "y1_exclusive": 800,
+    "description": "Static architectural region excluding sky, foliage, statistics overlays, and console overlays."
+  },
+  "cloud_preprocessing": {
+    "phone_status_bar_pixels_removed": 120,
+    "affine_registration_to_gt": {
+      "local_keypoints": 1491,
+      "cloud_keypoints": 1974,
+      "ratio_test_matches": 522,
+      "ransac_inliers": 440,
+      "inlier_ratio": 0.842911877394636,
+      "median_inlier_reprojection_error_px": 0.5578811764717102,
+      "affine_a00": 0.9580398311114915,
+      "affine_a01": -8.80850900493316e-06,
+      "affine_tx": 55.866004926520226,
+      "affine_a10": -0.00018792393129875892,
+      "affine_a11": 0.9999407630187769,
+      "affine_ty": 0.2478399821176398,
+      "max_axis_scale": 0.9999409980374407,
+      "min_axis_scale": 0.9580396042855377,
+      "rotation_deg_approx": -0.01123883125228483
+    }
+  },
+  "delta_split_minus_cloud": {
+    "vmaf_single_frame": 14.053049999999999,
+    "psnr_rgb_db": -0.6371091826994331,
+    "ssim_rgb": 0.02043063412597612,
+    "mae_rgb_0_255": -0.24347505668934222,
+    "rmse_rgb_0_255": 0.3450125483813977,
+    "boundary_f1_at_2px": -0.051768725140266314,
+    "boundary_median_px": -0.5,
+    "boundary_clipped_mean_at_10px": 0.06285157557862653
+  },
+  "limitations": [
+    "The screenshots were not captured from a synchronized frame identifier.",
+    "The comparison is restricted to a static architectural ROI.",
+    "The pure-cloud JPEG and split-rendered PNG use different capture containers.",
+    "Affine correction of the cloud screenshot introduces resampling.",
+    "Single-frame VMAF has no temporal-motion contribution."
+  ],
+  "results": [
+    {
+      "scope": "cloud_vp9_vs_gt",
+      "width": 1400,
+      "height": 210,
+      "vmaf_single_frame": 66.743086,
+      "psnr_rgb_db": 35.00259860881195,
+      "ssim_rgb": 0.8993854858451561,
+      "mae_rgb_0_255": 3.111879818594104,
+      "rmse_rgb_0_255": 4.533256051762243,
+      "boundary_displacement_px": 3.172347014223902,
+      "test_to_reference_px": 0.59356910041831,
+      "reference_to_test_px": 5.751124928029494,
+      "boundary_median_px": 0.5,
+      "boundary_p95_px": 19.00505376188691,
+      "boundary_clipped_mean_at_10px": 1.4868819947056238,
+      "boundary_precision_at_2px": 0.9672977624784854,
+      "boundary_recall_at_2px": 0.7506666666666667,
+      "boundary_f1_at_2px": 0.8453238899657095,
+      "boundary_miss_rate_at_2px": 0.2493333333333333,
+      "false_edge_rate_at_2px": 0.03270223752151458,
+      "test_edge_density": 0.003952380952380952,
+      "reference_edge_density": 0.00510204081632653
+    },
+    {
+      "scope": "split_vp9_vs_gt",
+      "width": 1400,
+      "height": 210,
+      "vmaf_single_frame": 80.796136,
+      "psnr_rgb_db": 34.36548942611252,
+      "ssim_rgb": 0.9198161199711322,
+      "mae_rgb_0_255": 2.868404761904762,
+      "rmse_rgb_0_255": 4.878268600143641,
+      "boundary_displacement_px": 36.232296082200975,
+      "test_to_reference_px": 0.5202346987897606,
+      "reference_to_test_px": 71.94435746561219,
+      "boundary_median_px": 0.0,
+      "boundary_p95_px": 340.00610157602586,
+      "boundary_clipped_mean_at_10px": 1.5497335702842503,
+      "boundary_precision_at_2px": 0.9300448430493273,
+      "boundary_recall_at_2px": 0.692,
+      "boundary_f1_at_2px": 0.7935551648254432,
+      "boundary_miss_rate_at_2px": 0.30800000000000005,
+      "false_edge_rate_at_2px": 0.06995515695067267,
+      "test_edge_density": 0.003792517006802721,
+      "reference_edge_density": 0.00510204081632653
+    }
+  ]
+}

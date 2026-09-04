@@ -1,0 +1,99 @@
+{
+  "version": "e0d9b82d",
+  "fps": 166.67,
+  "frames": [
+    {
+      "frameNum": 0,
+      "metrics": {
+        "integer_motion2": 0.000000,
+        "integer_motion": 0.000000,
+        "integer_adm2": 0.866713,
+        "integer_adm_scale0": 0.962805,
+        "integer_adm_scale1": 0.915053,
+        "integer_adm_scale2": 0.875694,
+        "integer_adm_scale3": 0.780438,
+        "integer_vif_scale0": 0.184035,
+        "integer_vif_scale1": 0.316512,
+        "integer_vif_scale2": 0.370703,
+        "integer_vif_scale3": 0.422079,
+        "vmaf": 33.927904
+      }
+    }
+  ],
+  "pooled_metrics": {
+    "integer_motion2": {
+      "min": 0.000000,
+      "max": 0.000000,
+      "mean": 0.000000,
+      "harmonic_mean": 0.000000
+    },
+    "integer_motion": {
+      "min": 0.000000,
+      "max": 0.000000,
+      "mean": 0.000000,
+      "harmonic_mean": 0.000000
+    },
+    "integer_adm2": {
+      "min": 0.866713,
+      "max": 0.866713,
+      "mean": 0.866713,
+      "harmonic_mean": 0.866713
+    },
+    "integer_adm_scale0": {
+      "min": 0.962805,
+      "max": 0.962805,
+      "mean": 0.962805,
+      "harmonic_mean": 0.962805
+    },
+    "integer_adm_scale1": {
+      "min": 0.915053,
+      "max": 0.915053,
+      "mean": 0.915053,
+      "harmonic_mean": 0.915053
+    },
+    "integer_adm_scale2": {
+      "min": 0.875694,
+      "max": 0.875694,
+      "mean": 0.875694,
+      "harmonic_mean": 0.875694
+    },
+    "integer_adm_scale3": {
+      "min": 0.780438,
+      "max": 0.780438,
+      "mean": 0.780438,
+      "harmonic_mean": 0.780438
+    },
+    "integer_vif_scale0": {
+      "min": 0.184035,
+      "max": 0.184035,
+      "mean": 0.184035,
+      "harmonic_mean": 0.184035
+    },
+    "integer_vif_scale1": {
+      "min": 0.316512,
+      "max": 0.316512,
+      "mean": 0.316512,
+      "harmonic_mean": 0.316512
+    },
+    "integer_vif_scale2": {
+      "min": 0.370703,
+      "max": 0.370703,
+      "mean": 0.370703,
+      "harmonic_mean": 0.370703
+    },
+    "integer_vif_scale3": {
+      "min": 0.422079,
+      "max": 0.422079,
+      "mean": 0.422079,
+      "harmonic_mean": 0.422079
+    },
+    "vmaf": {
+      "min": 33.927904,
+      "max": 33.927904,
+      "mean": 33.927904,
+      "harmonic_mean": 33.927904
+    }
+  },
+  "aggregate_metrics": {
+  }
+}

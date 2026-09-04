@@ -1,0 +1,13 @@
+{
+  "model_root": "E:\\Documents\\资料\\Render\\Render\\测试\\ablation_models_per_layer_canvas_v2",
+  "variants": [
+    "no_barrier_no_switch"
+  ],
+  "smooth_episodes": 50,
+  "evaluation_variants_plotted": [
+    "no_barrier_no_switch"
+  ],
+  "training_variants_plotted": [
+    "no_barrier_no_switch"
+  ]
+}
