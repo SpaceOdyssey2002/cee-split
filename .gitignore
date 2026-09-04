@@ -34,6 +34,20 @@ unity-split-render/*.csproj
 unity-split-render/*.sln
 unity-split-render/*.log
 
+# QoE proxy Unity generated state and raw captured frames
+qoe-proxy-unity/[Ll]ibrary/
+qoe-proxy-unity/[Tt]emp/
+qoe-proxy-unity/[Oo]bj/
+qoe-proxy-unity/[Ll]ogs/
+qoe-proxy-unity/[Bb]uild/
+qoe-proxy-unity/[Bb]uilds/
+qoe-proxy-unity/UserSettings/
+qoe-proxy-unity/.vs/
+qoe-proxy-unity/*.csproj
+qoe-proxy-unity/*.sln
+qoe-proxy-unity/*.log
+qoe-proxy-unity/DatasetOutputs/**/*.png
+
 # LaTeX intermediates and rendered QA scratch files
 paper/tmp/
 paper/*.aux
