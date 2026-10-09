@@ -53,9 +53,7 @@
 | `QoE代理（新版）/vp9_proxy/` | 服务器使用的 VMAF 模型和 scaler |
 | `calibration/` | 实测校准数据 |
 | `ablation_models_decoupled_vp9/full/seed_1/` | 自动服务器当前使用的模型 |
-| `ablation_models_per_layer_canvas_v2/full/` | 论文使用的三随机种子模型 |
-| `strong_baseline_results_per_layer_canvas_v2_1000/` | PPO 与基线对比结果 |
-| `variant_five_condition_per_layer_canvas_v2/` | 五种条件下的 PPO 汇总 |
-| `top_conf_eval_results_decoupled_vp9/` | 分层策略对比结果 |
+
+自动服务器只保留 `best_model.zip` 和 `vec_normalize.pkl`。其他训练产物、评估结果和图表自行生成，不提交到仓库。
 
 保留目录结构和原有脚本文件名，避免破坏导入及模型路径。同一节点上的多个层保留各自渲染分辨率，合并到最大的画布后，共享最高目标码率的视频流。

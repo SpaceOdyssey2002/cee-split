@@ -50,12 +50,20 @@ qoe-proxy-unity/*.sln
 qoe-proxy-unity/*.log
 qoe-proxy-unity/DatasetOutputs/**/*.png
 
-# LaTeX intermediates and rendered QA scratch files
-paper/tmp/
-paper/*.aux
-paper/*.blg
-paper/*.fdb_latexmk
-paper/*.fls
-paper/*.log
-paper/*.out
-paper/*.synctex.gz
+# Papers and generated experiment outputs
+/paper/
+render-tests/*results*/
+render-tests/variant_five_condition*/
+render-tests/ablation_models*/
+render-tests/training_curves*/
+render-tests/drl_logs*/
+render-tests/*.log
+render-tests/render_decision_log.csv
+render-tests/train_trace.csv
+render-tests/train_network.txt
+render-tests/QoE*/**/evaluation_metrics.*
+render-tests/QoE*/**/test_predictions.csv
+render-tests/QoE*/**/vmaf_loss_curve.png
+render-tests/QoE*/**/vmaf_prediction.png
+render-tests/QoE*/**/configuration_mean_metrics.json
+render-tests/QoE*/**/configuration_mean_predictions.csv
