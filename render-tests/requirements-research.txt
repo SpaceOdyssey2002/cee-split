@@ -1,0 +1,8 @@
+-r requirements.txt
+gymnasium
+matplotlib
+pandas
+seaborn
+stable-baselines3
+torch
+tensorboard

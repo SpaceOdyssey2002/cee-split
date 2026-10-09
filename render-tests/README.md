@@ -1,56 +1,61 @@
-# CEE-Split simulation and Unity control
+# Python 说明
 
-The Python modules intentionally remain in this directory because the training,
-evaluation, and Unity server entry points import their sibling modules directly.
-Generated models and results are kept in separate named directories.
+所有命令在本目录执行。首次运行 Unity 系统，先看 [快速开始](../快速开始.md)。
 
-## Main entry points
+| 文件 | 用途 |
+|---|---|
+| `manual_server.py` | 手动输入分层决策 |
+| `rl_server.py` | 用已有 PPO 模型自动决策 |
+| `run_unity_server.py` | 启动自动决策服务器，等同于运行 `rl_server.py` |
+| `scheduling_config.py` | 节点、分辨率和码率定义 |
+| `shared_print.py` | 状态和决策输出 |
+| `hybrid_render_env.py` | 强化学习仿真环境 |
+| `train_ablation.py` | 训练 PPO 和消融模型 |
+| `evaluate_strong_baselines.py` | 对比 PPO 与基线策略 |
+| `evaluate_ablation.py` | 消融评估 |
+| `evalute.py` | 公共评估逻辑，其他脚本会导入它 |
+| `fit_system_models.py` | 拟合渲染和编码参数 |
+| `generate_training_data.py` | 生成训练数据 |
+| `plot_training_curves.py` | 绘制训练曲线 |
 
-- `hybrid_render_env.py`: trace-driven CEE rendering environment.
-- `scheduling_config.py`: shared node, resolution, and target-rate definitions.
-- `train_ablation.py`: PPO training entry point.
-- `evalute.py`: common evaluator and baseline implementations.
-- `evaluate_strong_baselines.py`: Best Static, scenario-static oracle, greedy
-  oracle, and three-seed PPO comparison.
-- `evaluate_ablation.py`: optional component evaluation.
-- `rl_server.py`: Unity PPO inference server.
-- `run_unity_server.py`: stable Unity server launcher.
-- `manual_server.py`: manual-action Unity launcher for prototype debugging.
-- `fit_system_models.py`: rendering and codec coefficient fitting.
-- `generate_training_data.py`: workload and enhanced network-trace generation.
-- `plot_training_curves.py`: convergence-curve generation.
+## 手动调控
 
-## Canonical data and models
-
-- `datasets/`: train/evaluation workload and network traces.
-- `网络数据集/`: source mobile-network traces.
-- `QoE代理（新版）/vp9_proxy/`: VP9 configuration-level VMAF proxy.
-- `calibration/`: measured rendering and codec calibration data.
-- `ablation_models_per_layer_canvas_v2/full/`: current three-seed paper policy.
-- `ablation_models_decoupled_vp9/full/seed_1/`: policy currently loaded by
-  `rl_server.py` for the physical prototype.
-
-## Canonical evaluation outputs
-
-- `strong_baseline_results_per_layer_canvas_v2_1000/`: five-condition strong
-  baseline comparison used by the paper.
-- `variant_five_condition_per_layer_canvas_v2/`: three-seed PPO condition
-  summaries used by the paper.
-- `top_conf_eval_results_decoupled_vp9/`: LBAS/fixed-partition component plots.
-
-## Action convention
-
-Each of the Near, Mid, and Far layers selects
-`[render node, render resolution, target rate]`, giving a nine-component
-`MultiDiscrete([3,5,5, 3,5,5, 3,5,5])` action. Layers retain independent
-rendering resolutions. Co-located layers are scaled to the largest selected
-node canvas and share the maximum requested WebRTC target rate.
-
-## Common commands
+使用仓库根目录创建的虚拟环境：
 
 ```powershell
-python run_unity_server.py
-python manual_server.py
-python train_ablation.py --help
-python evaluate_strong_baselines.py --help
+..\.venv\Scripts\python.exe -m pip install -r requirements.txt
+..\.venv\Scripts\python.exe manual_server.py --bandwidth-mode auto
 ```
+
+服务器监听 TCP 8080。输入 `mix` 可运行混合分配，输入 `local` 可运行全部本地渲染。
+每层按 `[节点 分辨率 码率]` 输入，共 9 个数字，例如 `2 4 4 1 2 2 0 1 1`。
+
+## 自动调控、训练和评估
+
+```powershell
+..\.venv\Scripts\python.exe -m pip install -r requirements-research.txt
+..\.venv\Scripts\python.exe rl_server.py --bandwidth-mode auto
+```
+
+手动和自动服务器使用同一个端口，运行其中一个即可。训练和评估参数查看：
+
+```powershell
+..\.venv\Scripts\python.exe train_ablation.py --help
+..\.venv\Scripts\python.exe evaluate_strong_baselines.py --help
+..\.venv\Scripts\python.exe evaluate_ablation.py --help
+```
+
+## 数据和模型
+
+| 目录 | 内容 |
+|---|---|
+| `datasets/`、`网络数据集/` | 工作负载和网络轨迹 |
+| `QoE代理（新版）/vp9_proxy/` | 服务器使用的 VMAF 模型和 scaler |
+| `calibration/` | 实测校准数据 |
+| `ablation_models_decoupled_vp9/full/seed_1/` | 自动服务器当前使用的模型 |
+| `ablation_models_per_layer_canvas_v2/full/` | 论文使用的三随机种子模型 |
+| `strong_baseline_results_per_layer_canvas_v2_1000/` | PPO 与基线对比结果 |
+| `variant_five_condition_per_layer_canvas_v2/` | 五种条件下的 PPO 汇总 |
+| `top_conf_eval_results_decoupled_vp9/` | 分层策略对比结果 |
+
+保留目录结构和原有脚本文件名，避免破坏导入及模型路径。同一节点上的多个层保留各自渲染分辨率，合并到最大的画布后，共享最高目标码率的视频流。

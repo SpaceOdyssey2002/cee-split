@@ -13,6 +13,8 @@ Desktop.ini
 *credentials*.json
 
 # Python caches
+.venv/
+venv/
 __pycache__/
 *.py[cod]
 .pytest_cache/
